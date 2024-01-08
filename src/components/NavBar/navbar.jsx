@@ -20,39 +20,42 @@ import wallet from "../../assets/wallet-icon.svg";
 const Navbar = () => {
   return (
     <aside className="navBar">
-      <div className="navTop">
+        <div className="navTop">
 
-        <div className="company">
-          <img src={profileImg} alt="profile" className="profileImg" />
-          <div className="nameDetails">
-            <p className="userName">Nishyan</p>
-            <a href="www.google.com" className="visitLink">Visit Store</a>
-          </div>
-          <img src={arrowDown} alt="down-arrow" />
+            {/* Company & Name Details */}
+            <div className="company">
+                <img src={profileImg} alt="profile" className="profileImg" />
+                <div className="nameDetails">
+                    <p className="userName">Nishyan</p>
+                    <a href="www.google.com" className="visitLink">Visit Store</a>
+                </div>
+                <img src={arrowDown} alt="down-arrow" />
+            </div>
+
+            {/* Nav Buttons */}
+            <button className="navBtn"><img src={home} alt="home" />Home</button>
+            <button className="navBtn"><img src={orders} alt="order" />Orders</button>
+            <button className="navBtn"><img src={products} alt="products" />Products</button>
+            <button className="navBtn"><img src={delivery} alt="delivery" />Delivery</button>
+            <button className="navBtn"><img src={marketing} alt="marketing" />Marketing</button>
+            <button className="navBtn"><img src={analytics} alt="analytics" />Analytics</button>
+            <button className="navBtn selected"><img src={payments} alt="payments" />Payments</button>
+            <button className="navBtn"><img src={tools} alt="tools" />Tools</button>
+            <button className="navBtn"><img src={discounts} alt="discounts" />Discounts</button>
+            <button className="navBtn"><img src={audience} alt="audience" />Audiences</button>
+            <button className="navBtn"><img src={appearance} alt="appearance" />Appearance</button>
+            <button className="navBtn"><img src={plugins} alt="plugins" />Plugins</button>
+
         </div>
 
-        <button className="navBtn"><img src={home} alt="home" />Home</button>
-        <button className="navBtn"><img src={orders} alt="order" />Orders</button>
-        <button className="navBtn"><img src={products} alt="products" />Products</button>
-        <button className="navBtn"><img src={delivery} alt="delivery" />Delivery</button>
-        <button className="navBtn"><img src={marketing} alt="marketing" />Marketing</button>
-        <button className="navBtn"><img src={analytics} alt="analytics" />Analytics</button>
-        <button className="navBtn selected"><img src={payments} alt="payments" />Payments</button>
-        <button className="navBtn"><img src={tools} alt="tools" />Tools</button>
-        <button className="navBtn"><img src={discounts} alt="discounts" />Discounts</button>
-        <button className="navBtn"><img src={audience} alt="audience" />Audiences</button>
-        <button className="navBtn"><img src={appearance} alt="appearance" />Appearance</button>
-        <button className="navBtn"><img src={plugins} alt="plugins" />Plugins</button>
-
-      </div>
-
-      <div className="creditWallet">
-        <img src={wallet} alt="wallet" className="walletIcon" />
-        <div className="walletTextContainer">
-          <p className="walletText">Available credits</p>
-          <p className="walletAmount">222.10</p>
+        {/* Credit Wallet */}
+        <div className="creditWallet">
+            <img src={wallet} alt="wallet" className="walletIcon" />
+            <div className="walletTextContainer">
+                <p className="walletText">Available credits</p>
+                <p className="walletAmount">222.10</p>
+            </div>
         </div>
-      </div>
 
     </aside>
   );
