@@ -1,12 +1,15 @@
 import React from "react";
 import "./mainPage.css";
 
+import summary_cards_info from "../../summary_card_info";
+import SummaryCard from "../SummaryCard/summaryCard";
 import search from "../../assets/search-icon.svg";
 import sort from "../../assets/sort-icon.svg";
 import download from "../../assets/download-icon.svg";
 import info from "../../assets/info-icon.svg";
 import arrowLeft from "../../assets/arrow-left.svg";
 import arrowRight from "../../assets/arrow-right.svg";
+import TableRow from "../TableRow/tableRow";
 
 const MainPage = () => {
   return (
@@ -19,14 +22,9 @@ const MainPage = () => {
       </div>
 
       <div className="summary">
-        <div className="card">
-          <p className="cardTitle">Online Orders</p>
-          <p className="cardValue">231</p>
-        </div>
-        <div className="card">
-          <p className="cardTitle">Amount Recieved</p>
-          <p className="cardValue">₹23,92,312.19</p>
-        </div>
+        {summary_cards_info.map((element)=>{
+          return <SummaryCard title={element.title} value={element.value}/>
+        })}
       </div>
 
       <div className="listView">
@@ -62,120 +60,25 @@ const MainPage = () => {
             </thead>
 
             <tbody>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
-              <tr>
-                <td className="orderId">#281209</td>
-                <td>7 July, 2023</td>
-                <td>₹1278.23</td>
-                <td>₹22</td>
-              </tr>
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
+              <TableRow />
             </tbody>
           </table>
 
@@ -194,7 +97,7 @@ const MainPage = () => {
               <button className="numberBtn">17</button>
               <button className="numberBtn">18</button>
             </div>
-            <button className="nextBtn"><img src={arrowRight} alt="arrow-right" />Next</button>
+            <button className="nextBtn">Next<img src={arrowRight} alt="arrow-right" /></button>
           </div>
         </div>
       </div>
