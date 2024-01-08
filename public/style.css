@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: "Inter", "sans-serif";
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+body {
+    color: var(--Black-100);
+}
+
+:root {
+    --navbar: #1E2640;
+    --Black-100: #FFF;
+}
